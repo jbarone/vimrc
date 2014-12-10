@@ -24,6 +24,7 @@ set clipboard=unnamedplus
 set complete-=i
 set confirm
 set directory-=.
+set expandtab
 set hidden
 set mouse=a
 set number
@@ -163,3 +164,7 @@ if (&t_Co == 256 || has('gui_running'))
   colorscheme solarized
   call togglebg#map('<F5')
 endif
+
+autocmd FileType go set noexpandtab
+autocmd FileType html set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript set shiftwidth=2 tabstop=2 softtabstop=2
