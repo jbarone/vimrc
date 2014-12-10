@@ -41,6 +41,8 @@ set nrformats-=octal
 set ttimeout
 set ttimeoutlen=100
 
+set nofoldenable
+
 "====[ Swap : and ; to make colon commands easier to type ]======
 nnoremap  ;  :
 nnoremap  :  ;
@@ -55,7 +57,8 @@ set laststatus=2
 set ruler
 set showcmd
 set wildmenu
-set wildignore+=*/log/*,*/node_modules/*,*/target/*,*/tmp/*,*.rbc,*.pyc,*.so,*.swp
+set wildignore+=log/**,node_modules/**,target/**,tmp/*
+set wildignore+=*.o,*.rbc,*.pyc,*.so,*.swp
 set wildmode=longest,list,full
 
 map Y y$
@@ -67,14 +70,20 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+"====[ CTRL-P Mappings ]=========================================
 nmap <leader>p ;CtrlPBuffer<CR>
 nmap <leader>t ;CtrlP<CR>
 nmap <leader>T ;CtrlPClearCache<CR>;CtrlP<CR>
 
+"====[ NERDTree Mappings ]=======================================
 nmap <leader>n ;NERDTreeToggle<CR>
 nmap <leader>f ;NERDTreeFind<CR>
 
+"====[ GitGutter Mappings ]======================================
 nmap <leader>g ;GitGutterToggle<CR>
+
+"====[ PyMode Settings ]=========================================
+let g:pymode = 1
 
 vmap <expr> <LEFT> DVB_Drag('left')
 vmap <expr> <RIGHT> DVB_Drag('right')
