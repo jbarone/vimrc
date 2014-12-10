@@ -48,6 +48,7 @@ set nofoldenable
 nnoremap  ;  :
 nnoremap  :  ;
 
+set hlsearch
 set incsearch
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
