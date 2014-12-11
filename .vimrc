@@ -161,6 +161,7 @@ endif
 
 inoremap <C-U> <C-G>u<C-U>
 
+set background=dark
 if (&t_Co == 256 || has('gui_running'))
   colorscheme solarized
   call togglebg#map('<F5')
