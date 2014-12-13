@@ -24,6 +24,7 @@ set backspace=indent,eol,start
 set backupcopy=yes
 set clipboard=unnamedplus
 set complete-=i
+set completeopt=menu
 set confirm
 set directory-=.
 set expandtab
