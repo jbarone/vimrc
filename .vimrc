@@ -3,6 +3,8 @@ execute pathogen#helptags()
 
 set nocompatible
 
+set guifont=Inconsolata\ for\ Powerline\ Medium\ 12
+
 " Powerline setup
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
