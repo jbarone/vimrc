@@ -1,14 +1,9 @@
-execute pathogen#infect()
-execute pathogen#helptags()
-
 set nocompatible
 
 set guifont=Inconsolata\ for\ Powerline\ Medium\ 12
 
-" Powerline setup
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+execute pathogen#infect()
+execute pathogen#helptags()
 
 if has('autocmd')
   filetype plugin indent on
@@ -89,6 +84,10 @@ nmap <leader>g ;GitGutterToggle<CR>
 
 "====[ PyMode Settings ]=========================================
 let g:pymode = 1
+
+"====[ Airline Settings ]========================================
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 vmap <expr> <LEFT> DVB_Drag('left')
 vmap <expr> <RIGHT> DVB_Drag('right')
