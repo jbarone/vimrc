@@ -17,7 +17,6 @@ endif
 set autoindent
 set backspace=indent,eol,start
 set backupcopy=yes
-set clipboard=unnamedplus
 set complete-=i
 set completeopt=menu
 set confirm
@@ -41,6 +40,12 @@ set ttimeout
 set ttimeoutlen=100
 
 set nofoldenable
+
+if has('unnamedplus')
+    set clipboard=unnamedplus
+else
+    set clipboard=unnamed
+endif
 
 "====[ Swap : and ; to make colon commands easier to type ]======
 nnoremap  ;  :
@@ -131,7 +136,9 @@ if has('path_extra')
   setglobal tags-=./tags tags^=./tags;
 endif
 
-if &shell =~# 'fish$'
+if (has("win32") || has("win64") || has("win16"))
+  set shell=$COMSPEC
+else
   set shell=/bin/bash
 endif
 
