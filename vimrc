@@ -74,6 +74,7 @@ map <C-l> <C-w>l
 nmap <leader>p ;CtrlPBuffer<CR>
 nmap <leader>t ;CtrlP<CR>
 nmap <leader>T ;CtrlPClearCache<CR>;CtrlP<CR>
+let g:ctrlp_working_path_mode='r'
 
 "====[ NERDTree Mappings ]=======================================
 nmap <leader>n ;NERDTreeToggle<CR>
