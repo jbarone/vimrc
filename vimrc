@@ -1,6 +1,10 @@
 set nocompatible
 
-set guifont=Inconsolata\ for\ Powerline\ Medium\ 12
+if (has("win32") || has("win64") || has("win16"))
+  set guifont=Inconsolata\ for\ Powerline:h12
+else
+  set guifont=Inconsolata\ for\ Powerline\ Medium\ 12
+endif
 
 execute pathogen#infect()
 execute pathogen#helptags()
