@@ -161,6 +161,13 @@ endif
 set sessionoptions-=options
 
 " Allow color schemes to do bright colors without forcing bold.
+
+set background=dark
+if (&t_Co == 256 || has('gui_running'))
+  colorscheme solarized
+  call togglebg#map('<F5')
+endif
+
 if &t_Co == 8 && $TERM !~# '^linux'
   set t_Co=16
 endif
@@ -174,12 +181,6 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
 endif
 
 inoremap <C-U> <C-G>u<C-U>
-
-set background=dark
-if (&t_Co == 256 || has('gui_running'))
-  colorscheme solarized
-  call togglebg#map('<F5')
-endif
 
 autocmd FileType go set noexpandtab
 autocmd FileType html set shiftwidth=2 tabstop=2 softtabstop=2
