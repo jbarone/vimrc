@@ -165,7 +165,7 @@ if &t_Co == 8 && $TERM !~# '^linux'
   set t_Co=16
 endif
 
-highlight ColorColumn ctermbg=magenta
+highlight ColorColumn ctermbg=magenta guibg=purple
 exec matchadd('ColorColumn', '\%81v', 100)
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
