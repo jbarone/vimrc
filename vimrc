@@ -51,10 +51,6 @@ else
     set clipboard=unnamed
 endif
 
-"====[ Swap : and ; to make colon commands easier to type ]======
-nnoremap  ;  :
-nnoremap  :  ;
-
 set hlsearch
 set incsearch
 " Use <C-L> to clear the highlighting of :set hlsearch.
