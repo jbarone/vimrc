@@ -28,9 +28,6 @@
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/gocode"]
-	path = bundle/gocode
-	url = git://github.com/Blackrush/vim-gocode.git
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = git://github.com/pangloss/vim-javascript.git
@@ -52,3 +49,45 @@
 [submodule "bundle/nerdtree-git-plugin"]
 	path = bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/dockerfile"]
+	path = bundle/dockerfile
+	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "bundle/gist"]
+	path = bundle/gist
+	url = https://github.com/mattn/gist-vim.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/neosnippet"]
+	path = bundle/neosnippet
+	url = https://github.com/Shougo/neosnippet.vim.git
+[submodule "bundle/neocomplete"]
+	path = bundle/neocomplete
+	url = https://github.com/Shougo/neocomplete.vim.git
+[submodule "bundle/base16"]
+	path = bundle/base16
+	url = https://github.com/chriskempson/base16-vim.git
+[submodule "bundle/bclose"]
+	path = bundle/bclose
+	url = https://github.com/bcaccinolo/bclose.git
+[submodule "bundle/go"]
+	path = bundle/go
+	url = https://github.com/fatih/vim-go.git
+[submodule "bundle/autopairs"]
+	path = bundle/autopairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "bundle/csapprox"]
+	path = bundle/csapprox
+	url = https://github.com/godlygeek/csapprox.git
+[submodule "bundle/gitv"]
+	path = bundle/gitv
+	url = https://github.com/gregsexton/gitv.git

@@ -15,4 +15,5 @@ augroup whitespace
   autocmd BufWritePre *.go call whitespace#strip_trailing()
   autocmd BufWritePre *.c call whitespace#strip_trailing()
   autocmd BufWritePre *.cpp call whitespace#strip_trailing()
+  autocmd BufWritePre *.coffee :call whitespace#strip_trailing()
 augroup END
