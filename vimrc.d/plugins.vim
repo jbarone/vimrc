@@ -3,10 +3,12 @@ execute pathogen#infect()
 execute pathogen#helptags()
 
 " Allow color schemes to do bright colors without forcing bold.
-set background=dark
-if (&t_Co == 256 || has('gui_running'))
+if has('gui_running')
+  set background=dark
   colorscheme solarized
   call togglebg#map('<F5')
+else
+  colorscheme distinguished
 endif
 
 

@@ -148,18 +148,13 @@ if has('syntax') && !exists('g:syntax_on')
     syntax enable
 endif
 
-try
-    colorscheme desert
-catch
-endtry
+colorscheme elflord
 
-set background=dark
-
+set t_Co=256
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
     set guioptions-=e
-    set t_Co=256
     set guitablabel=%M\ %t
 endif
 
