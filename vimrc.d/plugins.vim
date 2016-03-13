@@ -10,6 +10,14 @@ else
   colorscheme distinguished
 endif
 
+vmap <expr> <LEFT> DVB_Drag('left')
+vmap <expr> <RIGHT> DVB_Drag('right')
+vmap <expr> <DOWN> DVB_Drag('down')
+vmap <expr> <UP> DVB_Drag('up')
+
+nmap :l :call ListTrans_toggle_format()<CR>
+vmap :l :call ListTrans_toggle_format('visual')<CR>
+
 
 "====[ NERDTree Mappings ]=======================================
 nmap <leader>n :NERDTreeToggle<CR>
@@ -79,6 +87,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['go'] }
+
 
 "====[ NeoComplete Mappings ]=====================================
 
@@ -140,6 +151,9 @@ au FileType go nmap <Leader>s <Plug>(go-implements)
 
 " Show type info for the word under your cursor
 au FileType go nmap <Leader>i <Plug>(go-info)
+
+" Rename the identifier under the cursor to a new name
+au FileType go nmap <Leader>e <Plug>(go-rename)
 
 " Open the relevant Godoc for the word under the cursor
 au FileType go nmap <Leader>gd <Plug>(go-doc)

@@ -33,7 +33,7 @@ vmap <Leader>w <ESC><ESC>:w<CR>
 
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
-command W w %
+" command W w %
 
 " This is totally awesome - remap jj to escape in insert mode.  You'll never type jj anyway, so it's great!
 inoremap jj <esc>
@@ -43,9 +43,9 @@ nnoremap JJJJ <nop>
 " VIM user interface
 "------------------------------------------------------------------------------
 if (has("win32") || has("win64") || has("win16") || has("mac"))
-  set guifont=Inconsolata\ for\ Powerline:h12
+  set guifont=Hack:h10
 else
-  set guifont=Inconsolata\ for\ Powerline\ Medium\ 12
+  set guifont=Hack\ Medium\ 10
 endif
 
 " Make sure that coursor is always vertically centered on j/k moves
@@ -230,14 +230,6 @@ set autoindent "Auto indent
 set smartindent "Smart indent
 set nowrap "Don't Wrap lines (it is stupid)
 
-vmap <expr> <LEFT> DVB_Drag('left')
-vmap <expr> <RIGHT> DVB_Drag('right')
-vmap <expr> <DOWN> DVB_Drag('down')
-vmap <expr> <UP> DVB_Drag('up')
-
-nmap :l :call ListTrans_toggle_format()<CR>
-vmap :l :call ListTrans_toggle_format('visual')<CR>
-
 if has("gui_running")
   " Automatically resize splits when resizing gvim window
   autocmd VimResized * wincmd =
@@ -256,6 +248,12 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 "------------------------------------------------------------------------------
 " Moving around, tabs, windows and buffers
 "------------------------------------------------------------------------------
+
+if has('unnamedplus')
+  set clipboard=unnamedplus
+else
+  set clipboard=unnamed
+endif
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
