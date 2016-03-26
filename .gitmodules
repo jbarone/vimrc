@@ -99,3 +99,6 @@
 [submodule "bundle/markdown"]
 	path = bundle/markdown
 	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "bundle/geeknote"]
+	path = bundle/geeknote
+	url = https://github.com/neilagabriel/vim-geeknote.git
