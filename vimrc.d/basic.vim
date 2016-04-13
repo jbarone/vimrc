@@ -228,7 +228,7 @@ set textwidth=500
 
 set autoindent "Auto indent
 set smartindent "Smart indent
-set nowrap "Don't Wrap lines (it is stupid)
+"set nowrap "Don't Wrap lines (it is stupid)
 
 if has("gui_running")
   " Automatically resize splits when resizing gvim window
